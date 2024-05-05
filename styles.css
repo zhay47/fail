@@ -1,4 +1,4 @@
-/* Add your CSS styles here */
+/* Global styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -34,18 +34,43 @@ main {
     text-align: center;
 }
 
-.hero {
-    background-color: #f8f8f8;
-    padding: 50px 0;
-}
-
-.about, .services {
-    padding: 50px 0;
-}
-
 footer {
     background-color: #343a40;
     color: #fff;
     text-align: center;
     padding: 20px 0;
+}
+
+
+/* Specific styles for About page */
+.about {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.about p {
+    margin-bottom: 20px;
+}
+
+
+/* Specific styles for Services page */
+.services {
+    padding: 50px 0;
+}
+
+.services ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.services ul li {
+    margin-bottom: 10px;
+}
+
+.services ul li::before {
+    content: "\2022";  /* Bullet point */
+    color: #343a40;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
