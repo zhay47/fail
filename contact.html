@@ -12,8 +12,8 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="ideas.html">Submit Ideas</a></li> <!-- Link to your ideas submission form -->
-                <li><a href="contact.html">Contact Us</a></li> <!-- Link to your contact form -->
+                <li><a href="ideas.html">Submit Ideas</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -30,6 +30,25 @@
                 
                 <input type="submit" value="Submit">
             </form>
+        </section>
+        
+        <section class="recent-submissions">
+            <h2>Recent Submissions</h2>
+            <?php
+            // Fetch recent submissions from the database
+            $sql = "SELECT * FROM form_submissions ORDER BY id DESC LIMIT 5";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                // Output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo "<h3>" . $row["title"] . "</h3>";
+                    echo "<p>" . $row["body"] . "</p>";
+                }
+            } else {
+                echo "No submissions yet.";
+            }
+            ?>
         </section>
     </main>
 
