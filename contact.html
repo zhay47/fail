@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Volt</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Volt</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ideas.html">Submit Ideas</a></li> <!-- Link to your ideas submission form -->
+                <li><a href="contact.html">Contact Us</a></li> <!-- Link to your contact form -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <label for="title">Title:</label><br>
+                <input type="text" id="title" name="title" required><br><br>
+                
+                <label for="body">Message:</label><br>
+                <textarea id="body" name="body" rows="5" required></textarea><br><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Volt. All rights reserved.</p>
+    </footer>
+</body>
+</html>
