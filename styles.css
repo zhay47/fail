@@ -43,6 +43,38 @@ nav ul li a {
     font-weight: bold;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #555;
+}
+
 main {
     padding: 20px 0;
 }
@@ -54,88 +86,72 @@ footer {
     padding: 20px 0;
 }
 
-/* Specific styles for About page */
+/* Specific styles for sections */
+.hero, .about, .services, .idea {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Floating text for sign-in */
+.dropdown-content a:first-child {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.dropdown-content a:first-child:hover {
+    background-color: #555;
+}
+
+/* Specific styles for Index page */
+.hero {
+    background-image: url('path/to/your/image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* About section */
 .about {
-    background-color: #fff;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;
+}
+
+.about h2 {
+    margin-bottom: 20px;
 }
 
 .about p {
     margin-bottom: 20px;
 }
 
-/* Specific styles for Services page */
+/* Services section */
 .services {
-    background-color: #fff;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0;
 }
 
-.services ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.services ul li {
-    margin-bottom: 10px;
-}
-
-.services ul li::before {
-    content: "\2022";  /* Bullet point */
-    color: #343a40;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-}
-
-/* Form styles */
-.contact-form {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.contact-form form {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
+.services h2 {
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
-.contact-form textarea {
-    height: 150px;
+.services p {
+    margin-bottom: 20px;
 }
 
-.contact-form input[type="submit"] {
-    background-color: #343a40;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form input[type="submit"]:hover {
-    background-color: #555;
-}
-
-/* Styles for ideas.html page */
+/* Specific styles for Ideas page */
 .idea {
     background-color: #fff;
     padding: 50px;
